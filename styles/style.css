@@ -179,6 +179,11 @@ address {
   flex: 1 0 430px;
 }
 
+.card__link {
+  display: block;
+  text-decoration: none;
+}
+
 .card {
   position: relative;
   padding: 50px 40px;
