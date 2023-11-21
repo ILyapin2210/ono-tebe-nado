@@ -1,26 +1,44 @@
 /* место для вашего кода */
 
+/* дополнительное обнуление и сетап */
+
 body {
   min-width: 100%;
   min-height: 100vh;
+  font-size: 18px;
+  line-height: normal;
+}
+
+li {
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
 }
 
 /* ограничивающий контейнер */
 
 .content-section {
+  /* для экранов шире 2К */
   max-width: 1440px;
   margin: 0 auto;
 }
 
-/* Шапка страницы */
+/* Шапка страницы*/
 
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 92px 49px 92px 51px;
+  padding-top: 92px;
+  padding-right: 49px;
+  padding-bottom: 92px;
+  padding-left: 51px;
 }
+
+/* логотип шапки */
 
 .header__logo {
 width: 136px;
@@ -28,6 +46,8 @@ height: 105px;
 justify-self: center;
 margin-bottom: 4px;
 }
+
+/* навигационное меню */
 
 .header__menu {
   justify-self: start;
@@ -39,12 +59,11 @@ margin-bottom: 4px;
 }
 
 .header__menu-list-item {
-  font-size: 18px;
-  list-style: circle;
+  list-style-type: circle;
 }
 
 .header__menu-list-item_no-bullet {
-  list-style: none;
+  list-style-type: none;
 }
 
 .header__link {
@@ -52,18 +71,21 @@ margin-bottom: 4px;
   white-space: nowrap;
 }
 
-.address {
-  font-size: 18px;
+/* список контактов */
+
+.contacts {
   line-height: 1.35;
   text-underline-offset: 4px;
-  justify-self: end;
   max-width: 240px;
 }
 
-address {
-  font-style: normal;
-  line-height: 1.35;
+/* дополнительное выравнивание для шапки*/
+
+.header__contacts {
+  justify-self: end;
 }
+
+/* входная секция */
 
 .cover {
   position: relative;
@@ -73,10 +95,12 @@ address {
   background-position: 0;
   background-size: cover;
   padding-top: 165px;
-  padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 50px;
+  padding-left: 50px;
 }
+
+/*оверлей*/
 
 .overlay {
   position: absolute;
@@ -85,6 +109,8 @@ address {
   z-index: -1;
 }
 
+/*Заголовок входной секции*/
+
 .cover__title {
   display: flex;
   flex-direction: column;
@@ -92,7 +118,6 @@ address {
   color: #fff;
   font-size: 100px;
   font-weight: 700;
-  font-style: normal;
   line-height: 1.15;
   letter-spacing: 30px;
   text-transform: uppercase;
@@ -120,6 +145,8 @@ address {
   letter-spacing: 0;
 }
 
+/* подзаголовок */
+
 .cover__description {
   display: flex;
   justify-content: end;
@@ -131,7 +158,6 @@ address {
 .cover__description-text {
   color: #fff;
   font-size: 22px;
-  font-style: normal;
   font-weight: 400;
   line-height: 1.273;
   text-transform: uppercase;
@@ -139,59 +165,77 @@ address {
 
 }
 
+/* кнопка "сделать ставку" */
+
 .bet-button {
   display: block;
   color: #fff;
   background-color: transparent;
   border: 1px solid #fff;
-  padding: 12px 32px;
+  padding-top: 12px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+  padding-left: 32px;
   font-size: 22px;
   text-transform: uppercase;
 }
 
+/* секция с лотами*/
+
 .lots {
-  padding: 180px 50px 183px;
+  padding-top: 180px;
+  padding-right: 50px;
+  padding-bottom: 183px;
+  padding-left: 50px;
 }
+
+/* заголовок секции с лотами */
 
 .lots__heading {
   padding-left: 40px;
-  margin-bottom: 27px;
+  padding-bottom: 27px;
 }
 
 .lots__heading-text {
   font-size: 40px;
-  font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
 }
 
+/* список карточек с лотами */
+
 .lots__card-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 25px;
   flex-wrap: wrap;
-  list-style-type: none;
   margin-bottom: 30px;
 }
 
 .lots__card-list-item {
   flex: 1 0 430px;
+  min-height: 450px;
 }
+
+/* карточка с лотом */
 
 .card__link {
   display: block;
   text-decoration: none;
+  height: 100%;
 }
 
 .card {
   position: relative;
-  padding: 50px 40px;
+  padding-top: 50px;
+  padding-right: 40px;
+  padding-bottom: 50px;
+  padding-left: 40px;
   z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 450px;
+  height: 100%;
 }
 
 .card_type_film {
@@ -218,7 +262,6 @@ address {
 .card__title {
   color: #fff;
   font-size: 22px;
-  font-style: normal;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: underline;
@@ -243,10 +286,13 @@ address {
   text-underline-offset: 5px;
 }
 
+/* секция "об аукционе" */
+
 .about {
   display: flex;
   gap: 25px;
-  padding: 0px 50px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .about__logo {
@@ -254,50 +300,59 @@ address {
   height: 240px;
   border-radius: 50%;
   background-color: #000;
-  padding: 63px 46px;
-  margin: 0 95px
+  padding-top: 63px;
+  padding-right: 46px;
+  padding-bottom: 63px;
+  padding-left: 46px;
+  margin-right: 95px;
+  margin-left: 95px;
 }
 
 .about__title {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 100px 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .about__text {
   margin-bottom: 25px;
   font-size: 20px;
-  line-height: normal;
 }
 
 .about__text:last-child {
   margin-bottom: 0;
 }
 
+/* подвал */
+
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px 90px 50px;
+  padding-top: 0;
+  padding-right: 50px;
+  padding-bottom: 90px;
+  padding-left: 50px;
   margin-top: 183px;
 }
 
+/* меню подвала */
+
 .footer__menu-list {
-  list-style-type: none;
   text-align: center;
 }
 
 .footer__menu-link {
-  font-size: 18px;
-  line-height: normal;
   text-underline-offset: 4px;
 }
+
+/* список социальных сетей */
 
 .footer__social-list {
   display: flex;
   justify-content: space-between;
   gap: 45px;
-  list-style-type: none;
 }
 
 .footer__social-list-item {
