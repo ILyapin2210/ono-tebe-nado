@@ -1,22 +1,5 @@
 /* место для вашего кода */
 
-/* дополнительное обнуление и сетап */
-
-body {
-  width: 100wv;
-  min-height: 100vh;
-  font-size: 18px;
-  line-height: normal;
-}
-
-li {
-  list-style-type: none;
-}
-
-address {
-  font-style: normal;
-}
-
 /* ограничивающий контейнер */
 
 .content-section {
@@ -29,19 +12,15 @@ address {
 
 .overlay {
   position: relative;
+  z-index: 1;
 }
 
 .overlay::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 100;
+  z-index: -1;
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-.overlay > * {
-  position: relative;
-  z-index: 200;
 }
 
 /* Шапка страницы*/
@@ -221,17 +200,15 @@ address {
   min-height: 450px;
 }
 
-/* карточка с лотом */
-
-.card__link {
+.lots__card-link {
   display: block;
   text-decoration: none;
   height: 100%;
 }
 
+/* карточка с лотом */
+
 .card {
-  position: relative;
-  z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
